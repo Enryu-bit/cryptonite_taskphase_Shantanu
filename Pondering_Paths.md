@@ -9,3 +9,10 @@ command - `/pwn` <br>
 ## Program And Absolute Paths
 earlier I learnt theory about what directories are, in this challenge I had to access a program by using its path to get the flag <br>
 command- `/challenge/run`
+## Position Thy Self
+This was interesting...at first I `cd` into a directory called challenge. <br>
+there was another directory called `run` there so i went in there. <br>
+when i tried to run the program by `/challenge/run` it showed me incorect. <br>
+It prompted me that i was not in the home directory so I `cd` to home and run the same `/challenge/run` and i get the flag.
+command - <br> 
+`cd /challenge <br> cd /run`
