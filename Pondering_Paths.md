@@ -15,4 +15,7 @@ there was another directory called `run` there so i went in there. <br>
 when i tried to run the program by `/challenge/run` it showed me incorect. <br>
 It prompted me that i was not in the home directory so I `cd` to home and run the same `/challenge/run` and i get the flag.
 command - <br> 
-`cd /challenge <br> cd /run`
+`cd /challenge` <br>
+`cd /run`<br>
+`cd /home`<br>
+`/challenge/run`
