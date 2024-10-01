@@ -78,3 +78,16 @@ Correct!!!
 Here is your flag:
 pwn.college{QIFo3tKKHujDZQAfqgTroNiEnKN.dhDN1QDLzYTN0czW}
 ```
+## Implicit Relative Paths, from / .
+In this challenge I learnt the difference between relative path and absolute path. <br>
+Absolute paths will always contain `/` in start.<br>
+I used `cd` to go to root folder. `cd /`. <br>
+then used `challenge/run` to get the flag. <br>
+```bash
+hacker@paths~implicit-relative-paths-from-:~$ cd /
+hacker@paths~implicit-relative-paths-from-:/$ challenge/run
+Correct!!!
+challenge/run is a relative path, invoked from the right directory!
+Here is your flag:
+pwn.college{s-ZO8EEgriXLhr_-UrQ96s9ggwc.dlDN1QDLzYTN0czW}
+```
