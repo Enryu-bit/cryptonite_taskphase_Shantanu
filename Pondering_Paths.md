@@ -116,4 +116,14 @@ Correct!!!
 Here is your flag:
 pwn.college{os_wIs-6ZXq1DExwzuGf429c1g2.dFTN1QDLzYTN0czW}
 ```
-
+## Home Sweet Home
+In this challenge i learnt that what `~` means and is the absoulte path to the user directory.<br>
+`~/~` will mean `/home/hacker/~` not `/home/hacker/home/hacker`<br>
+There Were constraints in the challenge that were fairly simple to satisfy. <br>
+Then i used `/challenge/run` with argument `~/h` which gave me the flag.<br>
+```bash
+hacker@paths~home-sweet-home:~$ /challenge/run ~/h
+Writing the file to /home/hacker/h!
+... and reading it back to you:
+pwn.college{86v-TU4qJpirx0HmPSx0AvlD55f.dNzM4QDLzYTN0czW}
+```
