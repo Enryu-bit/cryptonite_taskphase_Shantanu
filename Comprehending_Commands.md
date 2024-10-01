@@ -26,3 +26,10 @@ command - `cat /opt/radare2/sys/flag` to get the flag.<br>
 hacker@commands~more-catting-practice:~$ cat /opt/radare2/sys/flag
 pwn.college{wq6D2GrJM13Z52vcHyGuZkqx4YL.dBjM5QDLzYTN0czW}
 ```
+## Grepping For A Needle In A Haystack
+Learnt to use the `grep` command and how It can be used to traverse the whole content of a file and provide us with a line that has that string. <br>
+`grep a b` has two arguments where a = string to be searched and b = the absolute path of that file.txt in which it is to be searched.<br>
+```bash
+hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt
+pwn.college{UBTYryae5dxPMecOJUIxzLWTwcm.ddTM4QDLzYTN0czW}
+```
