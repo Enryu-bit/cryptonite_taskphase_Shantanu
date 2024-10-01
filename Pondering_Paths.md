@@ -19,3 +19,8 @@ command - <br>
 `cd /run`<br>
 `cd /home`<br>
 `/challenge/run`
+## Position Elsewhere
+In this i tried running `/challenge/run`<br>
+It prompted me to go to `/var/lib/apt/lists` and run there. <br>
+I used cd to go to that directory using `cd /var/lib/apt/lists`<br>
+Used the `/challenge/run` to get the flag.<br>
