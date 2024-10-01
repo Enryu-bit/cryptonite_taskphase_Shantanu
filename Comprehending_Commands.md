@@ -1,3 +1,2 @@
 ### Comprehending Commands
-## cat: not the pet, but the command!
-
+## Cat: Not The Pet, But The Command!
