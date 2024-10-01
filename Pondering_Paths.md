@@ -1,5 +1,5 @@
 # Pondering Paths
-## The root
+## The Root
 learnt about the tree filesystem in linux. <br>
 learnt about what a root(directory) is and how it can contain multiple directories inside it. <br>
 the address of the directory is path. <br>
