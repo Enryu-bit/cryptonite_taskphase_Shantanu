@@ -1,4 +1,4 @@
-### Comprehending Commands
+# Comprehending Commands
 ## Cat: Not The Pet, But The Command!
 Learnt what the `cat` command does.<br>
 It reads the content of the file given.<br>
