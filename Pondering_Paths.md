@@ -9,6 +9,12 @@ command - `/pwn` <br>
 ## Program And Absolute Paths
 earlier I learnt theory about what directories are, in this challenge I had to access a program by using its path to get the flag <br>
 command- `/challenge/run`
+```bash
+hacker@paths~program-and-absolute-paths:~$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path! Here is your flag:
+pwn.college{wscSDBufS1YxbjtwmgQctAoftup.dVDN1QDLzYTN0czW}
+```
 ## Position Thy Self
 This was interesting...at first I `cd` into a directory called challenge. <br>
 there was another directory called `run` there so i went in there. <br>
@@ -32,7 +38,6 @@ Correct!!!
 /challenge/run is an absolute path, invoked from the right directory!
 Here is your flag:
 pwn.college{Ah3qfsVm5xT_HJU4F_be1q3ndtt.dZDN1QDLzYTN0czW}
-hacker@paths~position-thy-self:/home$
 ```
 ## Position Elsewhere
 In this i tried running `/challenge/run`<br>
