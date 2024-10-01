@@ -6,6 +6,12 @@ the address of the directory is path. <br>
 By looking at the path we could trace back to the root. <br>
 invoked `/pwn` program to get the flag. <br>
 command - `/pwn` <br>
+```bash
+hacker@paths~the-root:~$ /pwn
+BOOM!!!
+Here is your flag:
+pwn.college{03UUW0oZ7Ug9wvECUpmfIrD20rS.dhzN5QDLzYTN0czW}
+```
 ## Program And Absolute Paths
 earlier I learnt theory about what directories are, in this challenge I had to access a program by using its path to get the flag <br>
 command- `/challenge/run`
