@@ -19,6 +19,21 @@ command - <br>
 `cd /run`<br>
 `cd /home`<br>
 `/challenge/run`
+```bash
+hacker@paths~position-thy-self:~$ cd /challenge
+hacker@paths~position-thy-self:/challenge$ cd /run
+hacker@paths~position-thy-self:/run$ /challenge/run
+Incorrect...
+You are not currently in the /home directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-thy-self:/run$ cd /home
+hacker@paths~position-thy-self:/home$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{Ah3qfsVm5xT_HJU4F_be1q3ndtt.dZDN1QDLzYTN0czW}
+hacker@paths~position-thy-self:/home$
+```
 ## Position Elsewhere
 In this i tried running `/challenge/run`<br>
 It prompted me to go to `/var/lib/apt/lists` and run there. <br>
