@@ -91,3 +91,15 @@ challenge/run is a relative path, invoked from the right directory!
 Here is your flag:
 pwn.college{s-ZO8EEgriXLhr_-UrQ96s9ggwc.dlDN1QDLzYTN0czW}
 ```
+## explicit relative paths, from / .
+In this I learned that `.` is used to refer to the same directory.<br>
+Then used `cd` to go to root directory by `cd /` and used `./challenge/run`.<br>
+```bash
+hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run
+Correct!!!
+./challenge/run is a relative path, invoked from the right directory!
+Here is your flag:
+pwn.college{sb92GmbEmezuvd4sgGyq9InIOuP.dBTN1QDLzYTN0czW}
+```
+
+
