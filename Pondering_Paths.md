@@ -93,7 +93,7 @@ challenge/run is a relative path, invoked from the right directory!
 Here is your flag:
 pwn.college{s-ZO8EEgriXLhr_-UrQ96s9ggwc.dlDN1QDLzYTN0czW}
 ```
-## explicit relative paths, from / .
+## Explicit Relative Paths, from / .
 In this I learned that `.` is used to refer to the same directory.<br>
 Then used `cd` to go to root directory by `cd /` and used `./challenge/run`.<br>
 ```bash
@@ -103,5 +103,17 @@ Correct!!!
 Here is your flag:
 pwn.college{sb92GmbEmezuvd4sgGyq9InIOuP.dBTN1QDLzYTN0czW}
 ```
-
+## Implicit Relative Path
+Now the `.` from earlier makes sense as to why we need to use it. <br>
+while running programs by their naked path the terminal mai misunderstanmd it with something outside of the current directory.<br>
+To avoid this first we use `./` and then write the name of the program.<br>
+So first i went into challenge by `cd /challenge` and the used `./run` to get the flag.<br>
+```bash
+hacker@paths~implicit-relative-path:~$ cd /challenge
+hacker@paths~implicit-relative-path:/challenge$ ./run
+Correct!!!
+./run is a relative path, invoked from the right directory!
+Here is your flag:
+pwn.college{os_wIs-6ZXq1DExwzuGf429c1g2.dFTN1QDLzYTN0czW}
+```
 
