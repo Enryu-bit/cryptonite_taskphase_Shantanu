@@ -12,3 +12,8 @@ pwn.college{IRFDFD5bPCY-OXWQbNk35Rq9pzb.ddjNyUDLzYTN0czW}
 learnt how the `echo` command works and what are arguments. <br>
 also implemented the `hello` command with one argument `hackers` to get flag. <br>
 command - `hello hackers`
+```bash
+hacker@hello~intro-to-arguments:~$ hello hackers
+Success! Here is your flag:
+pwn.college{IJVvARBYTRewMCj5gJphUpmR6_c.dhjNyUDLzYTN0czW}
+```
