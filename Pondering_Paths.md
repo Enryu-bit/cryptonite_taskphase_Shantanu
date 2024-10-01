@@ -63,7 +63,7 @@ Here is your flag:
 pwn.college{4UnyJHKRbj7yPvb8Vn7C9M3Ra9M.ddDN1QDLzYTN0czW}
 ```
 ## Position Yet Elsewhere
-This was rather simple then the previous one. <br>
+This was rather simple than the previous one. <br>
 just had to `/challenge/run` and it prompted me to go to `/var` directory. <br>
 Used `cd /var` to go there and executed `/challenge/run` to get the flag. <br>
 ```bash
