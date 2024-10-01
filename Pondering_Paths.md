@@ -81,6 +81,8 @@ pwn.college{QIFo3tKKHujDZQAfqgTroNiEnKN.dhDN1QDLzYTN0czW}
 ## Implicit Relative Paths, from / .
 In this challenge I learnt the difference between relative path and absolute path. <br>
 Absolute paths will always contain `/` in start.<br>
+Absolute Path regardless of the `cwd`(current working directory) will take you to the desired location.<br>
+While relative path is used to go from the `cwd` to the directories inside. <br>
 I used `cd` to go to root folder. `cd /`. <br>
 then used `challenge/run` to get the flag. <br>
 ```bash
