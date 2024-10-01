@@ -24,3 +24,21 @@ In this i tried running `/challenge/run`<br>
 It prompted me to go to `/var/lib/apt/lists` and run there. <br>
 I used cd to go to that directory using `cd /var/lib/apt/lists`<br>
 Used the `/challenge/run` to get the flag.<br>
+```bash
+hacker@paths~position-elsewhere:/run$ /challenge/run
+Incorrect...
+You are not currently in the /var/lib/apt/lists directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-elsewhere:/run$ cd
+hacker@paths~position-elsewhere:~$ cd /var/lib/apt
+hacker@paths~position-elsewhere:/var/lib/apt$ ls
+extended_states  lists  mirrors  periodic
+hacker@paths~position-elsewhere:/var/lib/apt$ cd /lists
+ssh-entrypoint: cd: /lists: No such file or directory
+hacker@paths~position-elsewhere:/var/lib/apt$ cd /var/lib/apt/lists
+hacker@paths~position-elsewhere:/var/lib/apt/lists$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{4UnyJHKRbj7yPvb8Vn7C9M3Ra9M.ddDN1QDLzYTN0czW}
+```
