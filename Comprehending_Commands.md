@@ -166,3 +166,20 @@ CONGRATULATIONS! Your perserverence has paid off, and you have found the flag!
 It is: pwn.college{U97tTQ11qz9ewYuGG3zZC3nFgK3.dljM4QDLzYTN0czW}
 hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/scapy/modules/__pycache__$
 ```
+## Making Directories
+In this I learnt how to use the `mkdir` command and make a directory named `pwn` in tmp directory.<br>
+Then I used `touch` to create a file named `college`.<br>
+Then used `/challenge/run` to get the flag.<br>
+```bash
+hacker@commands~making-directories:~$ cd /tmp
+hacker@commands~making-directories:/tmp$ ls
+bin  hsperfdata_root  tmp.MiOQGWw5Zc
+hacker@commands~making-directories:/tmp$ mkdir pwn
+hacker@commands~making-directories:/tmp$ cd pwn
+hacker@commands~making-directories:/tmp/pwn$ touch college
+hacker@commands~making-directories:/tmp/pwn$ ls
+college
+hacker@commands~making-directories:/tmp/pwn$ /challenge/run
+Success! Here is your flag:
+pwn.college{snB8XU63Z2y_K2aym4UzZBR9kDg.dFzM4QDLzYTN0czW}
+```
