@@ -66,4 +66,21 @@ hacker@commands~removing-files:~$ /challenge/check
 Excellent removal. Here is your reward:
 pwn.college{AnDWP57Iysy1LnxTgCZ4Ew77Kav.dZTOwUDLzYTN0czW}
 ```
+## Hidden Files
+Learnt that not all files are visible when `ls` is used and files that are preceded by `.` are hidden. <br>
+To view the hidden files i used the `ls -a` command.<br>
+There was a sus file named `.flag---`.<br>
+I tried to run it by `/.flag--`but it showed access denied.<br>
+So i used the `cat` command to read the flag out of it.<br>
+```bash
+hacker@commands~hidden-files:~$ cd /
+hacker@commands~hidden-files:/$ ls -a
+.                      bin        etc    lib64   nix   run   tmp
+..                     boot       home   libx32  opt   sbin  usr
+.dockerenv             challenge  lib    media   proc  srv   var
+.flag-210942113927702  dev        lib32  mnt     root  sys
+hacker@commands~hidden-files:/$ cat .flag-210942113927702
+pwn.college{MmRY9oXc3rD-lackXvYw2ec-bDT.dBTN4QDLzYTN0czW}
+```
+
 
