@@ -186,6 +186,7 @@ pwn.college{snB8XU63Z2y_K2aym4UzZBR9kDg.dFzM4QDLzYTN0czW}
 ## Finding Files
 In this I learnt about the `find` command.<br>
 How versatile it can be. We could find by name or directory on the whole system.<br>
+When I used `find` command I got multiple directories and files named `flag` I ran them one by one and got the flag in the third file.<br> 
 ```bash
 hacker@commands~finding-files:~$ cd /
 hacker@commands~finding-files:/$ find -name flag
