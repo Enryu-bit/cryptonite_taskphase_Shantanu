@@ -33,3 +33,25 @@ Learnt to use the `grep` command and how It can be used to traverse the whole co
 hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt
 pwn.college{UBTYryae5dxPMecOJUIxzLWTwcm.ddTM4QDLzYTN0czW}
 ```
+## Listing Files
+Learnt about the `ls` command and how it can be used to know the contents of a directory.<br>
+In this challenge the file run was renamed so i used `ls /challenge` to know the name of the renamed file.<br>
+Then used `/challenge/renamed` to run it to get the flag.<br>
+```bash
+hacker@commands~listing-files:~$ ls /challenge
+32613-renamed-run-28805  DESCRIPTION.md
+hacker@commands~listing-files:~$ /challenge/32613-renamed-run-28805
+Yahaha, you found me! Here is your flag:
+pwn.college{c859Ym-hvggMM4HAd8gfcciCQ9b.dhjM4QDLzYTN0czW}
+```
+## Touching Files
+This was fairly simple. I had to create two files in the `tmp` directory by using the `touch` command.<br>
+After that used `/challenge/run` to get the flag.<br>
+```bash
+hacker@commands~touching-files:~$ cd /tmp
+hacker@commands~touching-files:/tmp$ touch pwn
+hacker@commands~touching-files:/tmp$ touch college
+hacker@commands~touching-files:/tmp$ /challenge/run
+Success! Here is your flag:
+pwn.college{UQ_S2lVvuqpumAebylYJpm4kfLb.dBzM4QDLzYTN0czW}
+```
