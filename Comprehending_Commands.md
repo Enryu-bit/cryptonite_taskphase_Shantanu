@@ -55,3 +55,15 @@ hacker@commands~touching-files:/tmp$ /challenge/run
 Success! Here is your flag:
 pwn.college{UQ_S2lVvuqpumAebylYJpm4kfLb.dBzM4QDLzYTN0czW}
 ```
+## Removing Files
+In this I learnt about rm command and how it is used to delete files from a directory.<br>
+After I Deleted the file using `rm delete_me` then used `/challenege/check` to get the flag.<br>
+```bash
+hacker@commands~removing-files:~$ ls
+delete_me  h
+hacker@commands~removing-files:~$ rm delete_me
+hacker@commands~removing-files:~$ /challenge/check
+Excellent removal. Here is your reward:
+pwn.college{AnDWP57Iysy1LnxTgCZ4Ew77Kav.dZTOwUDLzYTN0czW}
+```
+
