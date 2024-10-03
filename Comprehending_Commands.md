@@ -236,3 +236,18 @@ cat: ./usr/local/share/radare2/5.9.5/flag: Is a directory
 hacker@commands~finding-files:/$ cat ./opt/linux/linux-5.4/security/apparmor/flag
 pwn.college{Yrsfgo6ZDTaB6Br9SW0oZZFWmNY.dJzM4QDLzYTN0czW}
 ```
+## Linking Files
+In this i learnt what linking is and how It can be performed.<br>
+There are two types of links Hard Link and Soft Link.<br>
+Hard Link basically creates a copy of the target file while on the other hand Soft link just has the address of the target files and refers the terminal to that address.<br>
+Rest of the task was fairly simple, just had to retrieve the flag from the target file.<br>
+```bash
+hacker@commands~linking-files:~$ cd /
+hacker@commands~linking-files:/$ ls
+bin   challenge  etc   home  lib32  libx32  mnt  opt   root  sbin  sys  usr
+boot  dev        flag  lib   lib64  media   nix  proc  run   srv   tmp  var
+hacker@commands~linking-files:/$ ln -s /flag /home/hacker/not-the-flag
+hacker@commands~linking-files:/$ /challenge/catflag
+About to read out the /home/hacker/not-the-flag file!
+pwn.college{UF54v0gikO8ybslmck9-D_9goyW.dlTM1UDLzYTN0czW}
+```
