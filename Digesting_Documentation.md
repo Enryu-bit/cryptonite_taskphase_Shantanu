@@ -54,3 +54,48 @@ AUTHOR
 hacker@man~reading-manuals:~$ /challenge/challenge --pdhabo 840
 Correct usage! Your flag: pwn.college{AYpdhHXRab8EVOobSujojkXXHRA.dRTM4QDLzYTN0czW}
 ```
+## Searching Manuals
+Read the man page for challenge.<br>
+Passed the correct argument to get the flag.<br>
+```bash
+man challenge
+hacker@man~searching-manuals:~$ /challenge/challenge --by
+Initializing...
+Correct usage! Your flag: pwn.college{8czav-iFmpUMMFwDCjaa9a21-ov.dVTM4QDLzYTN0czW}
+```
+## Searching For Manuals
+In this I learnt commands like `man -f filename` and other man command specific arguments which helped me get to the man page of `/challenge/challenge`.<br>
+This page had clues to what to give as arguments to obtain the flag.<br>
+```bash
+hacker@man~searching-for-manuals:/challenge$ man -f /challenge/challenge
+krcijnyfbq (1)       - print the flag!
+hacker@man~searching-for-manuals:/challenge$ man krcijnyfbq
+
+CHALLENGE(1)                  Challenge Commands                  CHALLENGE(1)
+
+NAME
+       /challenge/challenge - print the flag!
+
+SYNOPSIS
+       challenge OPTION
+
+DESCRIPTION
+       Output the flag when called with the right arguments.
+
+       --fortune
+              read a fortune
+
+       --version
+              output version information and exit
+
+       --krcijn NUM
+              print the flag if NUM is 735
+
+AUTHOR
+       Written by Zardus.
+
+hacker@man~searching-for-manuals:/challenge$ /challenge/challenge        --krcijn NUM
+Incorrect usage! Please read the challenge man page!
+hacker@man~searching-for-manuals:/challenge$ /challenge/challenge        --krcijn 735
+Correct usage! Your flag: pwn.college{kr7YcijnUSyVf3KP58bq9FsvmX9.dZTM4QDLzYTN0czW}
+```
