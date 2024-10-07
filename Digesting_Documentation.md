@@ -127,3 +127,24 @@ The secret value is: 654
 hacker@man~helpful-programs:~$ /challenge/challenge -g 654
 Correct usage! Your flag: pwn.college{gHd6k_u5VGV-SpHTH41cGHCPHaH.ddjM4QDLzYTN0czW}
 ```
+## Help For Builtins
+Learnt How to use `builtins` and how they help on information on one command.<br>
+the difference between builtin and man is that shell handles them internally instead of launching other programs.<br>
+```bash
+hacker@man~help-for-builtins:~$ help challenge
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
+
+    Options:
+      --fortune		display a fortune
+      --version		display the version
+      --secret VALUE	prints the flag, if VALUE is correct
+
+    You must be sure to provide the right value to --secret. That value
+    is "Mq_5Uyqb".
+hacker@man~help-for-builtins:~$ challenge --secret VALUE
+ERROR: incorrect argument to --secret. Read the help!
+hacker@man~help-for-builtins:~$ challenge --secret Mq_5Uyqb
+Correct! Here is your flag!
+pwn.college{Mq_5UyqbSO9iFHy-IEQ1ylQXMPU.dRTM5QDLzYTN0czW}
+```
