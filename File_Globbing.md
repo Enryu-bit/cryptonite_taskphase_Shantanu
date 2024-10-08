@@ -26,3 +26,22 @@ hacker@globbing~matching-with-:/challenge/files$ /challenge/run file_[absh]
 You got it! Here is your flag!
 pwn.college{k2BenPZ_IarwzW7OrmwpYw09_Vs.dNjM4QDLzYTN0czW}
 ```
+## Matching paths with []
+Similar to before but learned a new usecase of `[]` that we can use this in absolute paths aswell.<br>
+To get the flag I passed the absoulte path of the files a,b,s,h as an argument to run.<br>
+```bash
+hacker@globbing~matching-paths-with-:~$ /challenge/run /challenge/files/file_[absh]
+You got it! Here is your flag!
+pwn.college{MyuhxnTyjc-N5jmirsLk5pwKEVU.dRjM4QDLzYTN0czW}
+```
+## Mixing Globs
+I just had to run the 3 files in a way that they are less than 6 charecters.<br>
+It was easy as first I used `cd /challenge/files` then used `/challenge/run` and as an argument to this I passed `[cep]*`.<br>
+The thought process was that I will get the first letter by using [cep] and then the rest of the string bt `*`.<br>
+```bash
+hacker@globbing~mixing-globs:~$ cd /challenge/files/
+hacker@globbing~mixing-globs:/challenge/files$ /challenge/run [cep]*
+You got it! Here is your flag!
+pwn.college{AMcOHuwp1pFCbM90LNiUeGXJuD0.dVjM4QDLzYTN0czW}
+```
+## Exclusionary Globbing
