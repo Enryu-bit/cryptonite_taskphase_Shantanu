@@ -45,3 +45,10 @@ You got it! Here is your flag!
 pwn.college{AMcOHuwp1pFCbM90LNiUeGXJuD0.dVjM4QDLzYTN0czW}
 ```
 ## Exclusionary Globbing
+Learnt about other function of `[]` that when `^,!` is used in `[]` will filter out all the letters.<br>
+used `[!pwn]*` to get the flag.<br>
+```bash
+hacker@globbing~exclusionary-globbing:/challenge/files$ /challenge/run [!pwn]*
+You got it! Here is your flag!
+pwn.college{kHt0bISzlRJ4a_mrW5YlEre07nb.dZjM4QDLzYTN0czW}
+```
