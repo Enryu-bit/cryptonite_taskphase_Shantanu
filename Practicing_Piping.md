@@ -245,3 +245,15 @@ Correct! Passing secret value to /challenge/college...
 Great job! Here is your flag:
 pwn.college{0qBYKEJKfODxmG1LeswmgkQOTfm.dFjM5QDLzYTN0czW}
 ```
+## Writing To Multiple Programs
+I piped the output of `/challenge/hack` to `/challenge/the` and `/challenge/planet`.<br>
+And got the flag.<br>
+```bash
+hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >( /challenge/the ) >( /challenge/planet )
+This secret data must directly and simultaneously make it to /challenge/the and
+/challenge/planet. Don't try to copy-paste it; it changes too fast.
+24698319929301915
+Congratulations, you have duplicated data into the input of two programs! Here
+is your flag:
+pwn.college{EXSD6CBS1aWv4DhSyY58D4YauTk.dBDO0UDLzYTN0czW}
+```
