@@ -106,4 +106,16 @@ hacker@piping~redirecting-errors:~$ cat myflag
 ```
 ## Redirecting Input
 Learnt about `<` operator that is used to redirect input to a file.<br>
-First used echo to iput `COLLEGE`  in `PWN` .<br>
+First used echo to input `COLLEGE`  in `PWN` .<br>
+And then used the `<` to redirect the input to `/challenge/run < PWN` to get the flag.<br>
+```bash
+hacker@piping~redirecting-input:~$ echo COLLEGE > PWN
+hacker@piping~redirecting-input:~$
+hacker@piping~redirecting-input:~$ /challenge/run < PWN
+Reading from standard input...
+Correct! You have redirected the PWN file into my standard input, and I read
+the value 'COLLEGE' out of it!
+Here is your flag:
+pwn.college{cY68rJXP6X05DvYZD5Fbr4cT7sb.dBzN1QDLzYTN0czW}
+```
+
