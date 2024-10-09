@@ -104,3 +104,6 @@ hacker@piping~redirecting-errors:~$ cat myflag
 [FLAG] Here is your flag:
 [FLAG] pwn.college{IXwuvb9QbLfE27KcUz0pyBgv76B.ddjN1QDLzYTN0czW}
 ```
+## Redirecting Input
+Learnt about `<` operator that is used to redirect input to a file.<br>
+First used echo to iput `COLLEGE`  in `PWN` .<br>
