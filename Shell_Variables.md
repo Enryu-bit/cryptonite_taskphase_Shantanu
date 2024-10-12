@@ -32,3 +32,21 @@ hacker@variables~multi-word-variables:~$ PWN="COLLEGE YEAH"
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{gQPipLURs32lINqvIF9Ij2KrtxD.dBjN1QDLzYTN0czW}
 ```
+## Exporting Variables
+Learnt about scope of variables in shell.<br>
+Learnt how by default when variables are created, they are not inherited by the child of the main shell.<br>
+we have to use the `export command` to export them to the child shell.<br>
+```bash
+This concept was fairly simple to understand for me as similar things are there in Java called `Scope of Variables` and thus I had no problem obtaining the flag.<br>
+hacker@variables~exporting-variables:~$ export PWN=COLLEGE
+You've set the PWN variable to the proper value!
+hacker@variables~exporting-variables:~$ COLLEGE=PWN
+You've set the PWN variable to the proper value!
+You've set the COLLEGE variable to the proper value!
+hacker@variables~exporting-variables:~$ sh
+sh-5.2$ /challenge/run
+CORRECT!
+You have exported PWN=COLLEGE and set, but not exported, COLLEGE=PWN. Great
+job! Here is your flag:
+pwn.college{AwlTjoQaRdlZZpfWTuQ2oGAbb8p.dJjN1QDLzYTN0czW}
+```
