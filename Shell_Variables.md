@@ -70,4 +70,15 @@ LC_CTYPE=C.UTF-8
 PATH=/run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 _=/run/workspace/bin/env
 ```
-
+## Storing Command Output
+We can store outputs of a command inside variables using `$()`.<br>
+This is known as `Command Substitution`.<br>
+Older format was using ` ` but this is not advised as it can cause problems in nesting.<br>
+In this challenge we had to store the output of `/challenge/run` in a variable called `PWN` and then print it to obtain the flag.<br>
+```bash
+hacker@variables~storing-command-output:~$ PWN=$(/challenge/run)
+Congratulations! You have read the flag into the PWN variable. Now print it out
+and submit it!
+hacker@variables~storing-command-output:~$ echo $PWN
+pwn.college{gPc9x_uYdXUf1vA3Km2JIk4-vZa.dVzN0UDLzYTN0czW}
+```
