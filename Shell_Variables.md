@@ -7,3 +7,19 @@ In this challenge the flag was in the variable named `FLAG` and I had to print i
 hacker@variables~printing-variables:~$ echo $FLAG
 pwn.college{cbHm-VwdsuS4mYzQeUwaMFd2_RI.ddTN1QDLzYTN0czW}
 ```
+## Setting Variables
+Learnt how to assign values to variables in shell.<br>
+`var=1337` note: there should not be a gap after or before `=` or else the shell will treat each segment as a different command.<br>
+I also had a doubt regarding the assignment of string values.<br>
+The doubt was do i assign the value with a `""` or just normally.<br>
+Then I used GFG to address this one.<br>
+Reference
+`https://www.geeksforgeeks.org/string-manipulation-in-shell-scripting/`.<br>
+```bash
+hacker@variables~setting-variables:~$ PWN="COLLEGE"
+You've set the PWN variable properly! As promised, here is the flag:
+pwn.college{IBFICF6bM_h0a9KPqypgL5k-5GK.dlTN1QDLzYTN0czW}
+hacker@variables~setting-variables:~$ PWN=COLLEGE
+You've set the PWN variable properly! As promised, here is the flag:
+pwn.college{IBFICF6bM_h0a9KPqypgL5k-5GK.dlTN1QDLzYTN0czW}
+```
