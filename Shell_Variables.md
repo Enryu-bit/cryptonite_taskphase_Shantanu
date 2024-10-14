@@ -82,3 +82,22 @@ and submit it!
 hacker@variables~storing-command-output:~$ echo $PWN
 pwn.college{gPc9x_uYdXUf1vA3Km2JIk4-vZa.dVzN0UDLzYTN0czW}
 ```
+## Reading Input
+In this challenge learnt about the `read` builtin which helps us take input in some variable.<br>
+`-p` aregument can be used to show a message.<br>
+To obtain the flag i just had to read `COLLEGE` into a variable named `PWN`.<br>
+```bash
+hacker@variables~reading-input:~$ read -p "INPUT: " PWN
+INPUT: COLLEGE
+You've set the PWN variable properly! As promised, here is the flag:
+pwn.college{09cjQ2t7wY0zHWZexWRb_dd1f1V.dhzN1QDLzYTN0czW}
+```
+## Reading Files
+we can directly redirect the content of some file in a variable by using 
+`var=$(cat file)`, but this is not the most efficient way.<br>
+The more efficient way would be to `var < some file` to directly read it in `var`.<br>
+```bash
+hacker@variables~reading-files:~$ read PWN < /challenge/read_me
+You've set the PWN variable properly! As promised, here is the flag:
+pwn.college{w0EcARptd75quvT0LqY9yKsHxU9.dBjM4QDLzYTN0czW}
+```
