@@ -71,3 +71,25 @@ hacker@permissions~fun-with-groups-names:~$ chgrp grp32761 /flag
 hacker@permissions~fun-with-groups-names:~$ cat /flag
 pwn.college{k275-xyYGyEafVwXbcC8M4midy6.dJzNyUDLzYTN0czW}
 ```
+## Changing Permission
+We can also change the access level of files by using the `chmod` command.<br>
+to add we use `u` `g` `o` for user group and other user, to add read write execute, we can use ugo+-rwx and make all possible combinations you want.<br>
+The format is `chmod permission file`.<br>
+```bash
+hacker@permissions~changing-permissions:~$ ls -l
+total 36
+---------- 1 hacker hacker   4 Oct  8 17:41 COLLEGE
+---------- 1 hacker hacker   8 Oct  9 07:28 PWN
+---------- 1 root   hacker  77 Oct  9 14:12 cmd
+---------- 1 hacker hacker   4 Oct  9 07:27 college
+---------- 1 hacker hacker  58 Oct  1 16:33 h
+---------- 1 hacker hacker 829 Oct  8 19:07 instructions
+---------- 1 hacker hacker  93 Oct  8 19:07 myflag
+lrwxrwxrwx 1 hacker hacker   5 Oct  3 16:09 not-the-flag -> /flag
+---------- 1 hacker hacker  77 Oct  9 14:14 pwn
+---------- 1 hacker hacker 435 Oct  8 18:59 the-flag
+hacker@permissions~changing-permissions:~$ chmod ugo+rwx /flag
+hacker@permissions~changing-permissions:~$ cat /flag
+pwn.college{Y_32trqVVm9GXcGCCRDMO8PX9xI.dNzNyUDLzYTN0czW}
+```
+## Executable Files
