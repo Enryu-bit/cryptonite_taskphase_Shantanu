@@ -46,3 +46,28 @@ hacker@permissions~groups-and-files:~$ chgrp hacker /flag
 hacker@permissions~groups-and-files:~$ cat /flag
 pwn.college{wUTbcNNGhbezEeRYTC4JCjpDoH3.dFzNyUDLzYTN0czW}
 ```
+## Fun With Groups Names
+This time my user group was named something different than hacker so i used the id command to get the group name and then used `chgrp` to change the permission of `/flag` to my new group name to read it.<br>
+```bash
+hacker@permissions~fun-with-groups-names:~$ id
+uid=1000(hacker) gid=1000(grp32761) groups=1000(grp32761)
+hacker@permissions~fun-with-groups-names:~$ ls -l
+total 36
+-rw-r--r-- 1 hacker grp32761   4 Oct  8 17:41 COLLEGE
+-rw-r--r-- 1 hacker grp32761   8 Oct  9 07:28 PWN
+-rw-r--r-- 1 root   grp32761  77 Oct  9 14:12 cmd
+-rw-r--r-- 1 hacker grp32761   4 Oct  9 07:27 college
+-rw-r--r-- 1 hacker grp32761  58 Oct  1 16:33 h
+-rw-r--r-- 1 hacker grp32761 829 Oct  8 19:07 instructions
+-rw-r--r-- 1 hacker grp32761  93 Oct  8 19:07 myflag
+lrwxrwxrwx 1 hacker grp32761   5 Oct  3 16:09 not-the-flag -> /flag
+-rw-r--r-- 1 hacker grp32761  77 Oct  9 14:14 pwn
+-rw-r--r-- 1 hacker grp32761 435 Oct  8 18:59 the-flag
+hacker@permissions~fun-with-groups-names:~$ cat /flag
+cat: /flag: Permission denied
+hacker@permissions~fun-with-groups-names:~$ chgrp grp32761 flag
+chgrp: cannot access 'flag': No such file or directory
+hacker@permissions~fun-with-groups-names:~$ chgrp grp32761 /flag
+hacker@permissions~fun-with-groups-names:~$ cat /flag
+pwn.college{k275-xyYGyEafVwXbcC8M4midy6.dJzNyUDLzYTN0czW}
+```
