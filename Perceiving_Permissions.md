@@ -647,3 +647,15 @@ hacker@permissions~permissions-setting-practice:~$ chmod u+r,g+r,o+r /flag
 hacker@permissions~permissions-setting-practice:~$ cat /flag
 pwn.college{kUEi_VV19hPJy4StTb0koobgcO4.dNTM5QDL0kzN0czW}
 ```
+## The SUID Bit
+some programs need admin access which cant be available all the time, so the SUID command can give the user access as the files owner.<br>
+this access access can be given by chmod command by doing `u+s`.<br>
+```bash
+hacker@permissions~the-suid-bit:~$ chmod u+s /challenge/getroot
+hacker@permissions~the-suid-bit:~$ /challenge/getroot
+SUCCESS! You have set the suid bit on this program, and it is running as root!
+Here is your shell...
+root@permissions~the-suid-bit:~# cat /flag
+pwn.college{MtoYplFVlZFoqlEkm0dFiTw9tGv.dNTM2QDLzYTN0czW}
+```
+ 
