@@ -40,3 +40,16 @@ zardus@users~cracking-passwords:/home/hacker$ /challenge/run
 Congratulations, you have become Zardus! Here is your flag:
 pwn.college{Mtmai2zdreeJFuJjte658WoLdMz.ddTN0UDLzYTN0czW}
 ```
+## Using Sudo
+Learnt about the `sudo` command and how it evolved from `su`.<br>
+This command rather than giving access to the whole root shell runs specific commands by root access if it preceeds them.<br>
+Used it to read the flag.<br>
+```bash
+hacker@users~using-sudo:~$ ls
+COLLEGE  cmd      h             myflag        pwn
+PWN      college  instructions  not-the-flag  the-flag
+hacker@users~using-sudo:~$ cat not-the-flag
+cat: not-the-flag: Permission denied
+hacker@users~using-sudo:~$ sudo cat not-the-flag
+pwn.college{IRNMylywJ9C6jR7uQFniuIN9PT1.dhTN0UDLzYTN0czW}
+```
