@@ -1,4 +1,4 @@
-# Level 0
+e# Level 0
 Connected to ssh of bandit0 and then read a readme file to obtain the pass for Level 1.<br>
 ```bash
 shantanu@Shantanus-MacBook-Pro ~ % ssh -p 2220 bandit0@bandit.labs.overthewire.org
@@ -159,4 +159,198 @@ bandit4@bandit:~/inhere$ find . -type f -exec file {} +
 ./-file04: data
 bandit4@bandit:~/inhere$ cat ./-file07
 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
+# Level 5
+Very intersting level. had to find a file which had certain conditions and a size of 1033 bytes.<br>
+So as i used the find command previously then added another exec function to do ls -l {} + and piped the output of this in grep command which was finding 1033(bytes).<br>
+```bash
+bandit5@bandit:~$ cd inhere
+bandit5@bandit:~/inhere$ find . -type f -!executable
+-bash: !executable: event not found
+bandit5@bandit:~/inhere$ find . -type f ! -executable -exec file {} +
+./maybehere02/-file2:       X1 archive data
+./maybehere02/.file2:       ASCII text, with very long lines (2576)
+./maybehere02/spaces file2: ASCII text, with very long lines (8487)
+./maybehere19/-file2:       ASCII text, with very long lines (5593)
+./maybehere19/.file2:       ASCII text, with very long lines (4739)
+./maybehere19/spaces file2: ASCII text, with very long lines (8784)
+./maybehere08/-file2:       ASCII text, with very long lines (3824)
+./maybehere08/.file2:       ASCII text, with very long lines (746)
+./maybehere08/spaces file2: ASCII text, with very long lines (3692)
+./maybehere15/-file2:       ASCII text, with very long lines (9498)
+./maybehere15/.file2:       ASCII text
+./maybehere15/spaces file2: ASCII text
+./maybehere03/-file2:       ASCII text, with very long lines (6594)
+./maybehere03/.file2:       ASCII text, with very long lines (8879)
+./maybehere03/spaces file2: ASCII text, with very long lines (3384)
+./maybehere01/-file2:       ASCII text
+./maybehere01/.file2:       ASCII text, with very long lines (3069)
+./maybehere01/spaces file2: ASCII text, with very long lines (4542)
+./maybehere00/-file2:       ASCII text, with very long lines (9387)
+./maybehere00/.file2:       ASCII text, with very long lines (7835)
+./maybehere00/spaces file2: ASCII text, with very long lines (6849)
+./maybehere12/-file2:       ASCII text
+./maybehere12/.file2:       ASCII text, with very long lines (8243)
+./maybehere12/spaces file2: ASCII text, with very long lines (2459)
+./maybehere17/-file2:       ASCII text, with very long lines (1790)
+./maybehere17/.file2:       ASCII text, with very long lines (8340)
+./maybehere17/spaces file2: ASCII text, with very long lines (3386)
+./maybehere05/-file2:       ASCII text, with very long lines (5958)
+./maybehere05/.file2:       ASCII text, with very long lines (5916)
+./maybehere05/spaces file2: ASCII text, with very long lines (2419)
+./maybehere09/-file2:       ASCII text, with very long lines (773)
+./maybehere09/.file2:       ASCII text, with very long lines (8516)
+./maybehere09/spaces file2: ASCII text, with very long lines (8715)
+./maybehere06/-file2:       ASCII text, with very long lines (1075)
+./maybehere06/.file2:       ASCII text, with very long lines (8975)
+./maybehere06/spaces file2: ASCII text, with very long lines (4250)
+./maybehere10/-file2:       ASCII text, with very long lines (1990)
+./maybehere10/.file2:       ASCII text
+./maybehere10/spaces file2: ASCII text, with very long lines (3569)
+./maybehere11/-file2:       ASCII text, with very long lines (4558)
+./maybehere11/.file2:       ASCII text, with very long lines (2500)
+./maybehere11/spaces file2: ASCII text, with very long lines (502)
+./maybehere07/-file2:       ASCII text, with very long lines (2487)
+./maybehere07/.file2:       ASCII text, with very long lines (1000)
+./maybehere07/spaces file2: ASCII text, with very long lines (9063)
+./maybehere14/-file2:       ASCII text, with very long lines (8350)
+./maybehere14/.file2:       ASCII text, with very long lines (1502)
+./maybehere14/spaces file2: ASCII text, with very long lines (870)
+./maybehere04/-file2:       ASCII text, with very long lines (2618)
+./maybehere04/.file2:       ASCII text, with very long lines (6143)
+./maybehere04/spaces file2: ASCII text, with very long lines (2490)
+./maybehere13/-file2:       ASCII text, with very long lines (1422)
+./maybehere13/.file2:       ASCII text, with very long lines (8951)
+./maybehere13/spaces file2: ASCII text, with very long lines (951)
+./maybehere18/-file2:       ASCII text
+./maybehere18/.file2:       ASCII text, with very long lines (2083)
+./maybehere18/spaces file2: ASCII text, with very long lines (6347)
+./maybehere16/-file2:       ASCII text, with very long lines (5300)
+./maybehere16/.file2:       ASCII text, with very long lines (8471)
+./maybehere16/spaces file2: ASCII text, with very long lines (3145)
+bandit5@bandit:~/inhere$ find . -type f ! -executable -exec file {} + -exec ls -l {} +
+./maybehere02/-file2:       X1 archive data
+./maybehere02/.file2:       ASCII text, with very long lines (2576)
+./maybehere02/spaces file2: ASCII text, with very long lines (8487)
+./maybehere19/-file2:       ASCII text, with very long lines (5593)
+./maybehere19/.file2:       ASCII text, with very long lines (4739)
+./maybehere19/spaces file2: ASCII text, with very long lines (8784)
+./maybehere08/-file2:       ASCII text, with very long lines (3824)
+./maybehere08/.file2:       ASCII text, with very long lines (746)
+./maybehere08/spaces file2: ASCII text, with very long lines (3692)
+./maybehere15/-file2:       ASCII text, with very long lines (9498)
+./maybehere15/.file2:       ASCII text
+./maybehere15/spaces file2: ASCII text
+./maybehere03/-file2:       ASCII text, with very long lines (6594)
+./maybehere03/.file2:       ASCII text, with very long lines (8879)
+./maybehere03/spaces file2: ASCII text, with very long lines (3384)
+./maybehere01/-file2:       ASCII text
+./maybehere01/.file2:       ASCII text, with very long lines (3069)
+./maybehere01/spaces file2: ASCII text, with very long lines (4542)
+./maybehere00/-file2:       ASCII text, with very long lines (9387)
+./maybehere00/.file2:       ASCII text, with very long lines (7835)
+./maybehere00/spaces file2: ASCII text, with very long lines (6849)
+./maybehere12/-file2:       ASCII text
+./maybehere12/.file2:       ASCII text, with very long lines (8243)
+./maybehere12/spaces file2: ASCII text, with very long lines (2459)
+./maybehere17/-file2:       ASCII text, with very long lines (1790)
+./maybehere17/.file2:       ASCII text, with very long lines (8340)
+./maybehere17/spaces file2: ASCII text, with very long lines (3386)
+./maybehere05/-file2:       ASCII text, with very long lines (5958)
+./maybehere05/.file2:       ASCII text, with very long lines (5916)
+./maybehere05/spaces file2: ASCII text, with very long lines (2419)
+./maybehere09/-file2:       ASCII text, with very long lines (773)
+./maybehere09/.file2:       ASCII text, with very long lines (8516)
+./maybehere09/spaces file2: ASCII text, with very long lines (8715)
+./maybehere06/-file2:       ASCII text, with very long lines (1075)
+./maybehere06/.file2:       ASCII text, with very long lines (8975)
+./maybehere06/spaces file2: ASCII text, with very long lines (4250)
+./maybehere10/-file2:       ASCII text, with very long lines (1990)
+./maybehere10/.file2:       ASCII text
+./maybehere10/spaces file2: ASCII text, with very long lines (3569)
+./maybehere11/-file2:       ASCII text, with very long lines (4558)
+./maybehere11/.file2:       ASCII text, with very long lines (2500)
+./maybehere11/spaces file2: ASCII text, with very long lines (502)
+./maybehere07/-file2:       ASCII text, with very long lines (2487)
+./maybehere07/.file2:       ASCII text, with very long lines (1000)
+./maybehere07/spaces file2: ASCII text, with very long lines (9063)
+./maybehere14/-file2:       ASCII text, with very long lines (8350)
+./maybehere14/.file2:       ASCII text, with very long lines (1502)
+./maybehere14/spaces file2: ASCII text, with very long lines (870)
+./maybehere04/-file2:       ASCII text, with very long lines (2618)
+./maybehere04/.file2:       ASCII text, with very long lines (6143)
+./maybehere04/spaces file2: ASCII text, with very long lines (2490)
+./maybehere13/-file2:       ASCII text, with very long lines (1422)
+./maybehere13/.file2:       ASCII text, with very long lines (8951)
+./maybehere13/spaces file2: ASCII text, with very long lines (951)
+./maybehere18/-file2:       ASCII text
+./maybehere18/.file2:       ASCII text, with very long lines (2083)
+./maybehere18/spaces file2: ASCII text, with very long lines (6347)
+./maybehere16/-file2:       ASCII text, with very long lines (5300)
+./maybehere16/.file2:       ASCII text, with very long lines (8471)
+./maybehere16/spaces file2: ASCII text, with very long lines (3145)
+-rw-r----- 1 root bandit5 9388 Sep 19 07:08 ./maybehere00/-file2
+-rw-r----- 1 root bandit5 7836 Sep 19 07:08 ./maybehere00/.file2
+-rw-r----- 1 root bandit5 6850 Sep 19 07:08 ./maybehere00/spaces file2
+-rw-r----- 1 root bandit5  288 Sep 19 07:08 ./maybehere01/-file2
+-rw-r----- 1 root bandit5 3070 Sep 19 07:08 ./maybehere01/.file2
+-rw-r----- 1 root bandit5 4543 Sep 19 07:08 ./maybehere01/spaces file2
+-rw-r----- 1 root bandit5 3511 Sep 19 07:08 ./maybehere02/-file2
+-rw-r----- 1 root bandit5 2577 Sep 19 07:08 ./maybehere02/.file2
+-rw-r----- 1 root bandit5 8488 Sep 19 07:08 ./maybehere02/spaces file2
+-rw-r----- 1 root bandit5 6595 Sep 19 07:08 ./maybehere03/-file2
+-rw-r----- 1 root bandit5 8880 Sep 19 07:08 ./maybehere03/.file2
+-rw-r----- 1 root bandit5 3385 Sep 19 07:08 ./maybehere03/spaces file2
+-rw-r----- 1 root bandit5 2619 Sep 19 07:08 ./maybehere04/-file2
+-rw-r----- 1 root bandit5 6144 Sep 19 07:08 ./maybehere04/.file2
+-rw-r----- 1 root bandit5 2491 Sep 19 07:08 ./maybehere04/spaces file2
+-rw-r----- 1 root bandit5 5959 Sep 19 07:08 ./maybehere05/-file2
+-rw-r----- 1 root bandit5 5917 Sep 19 07:08 ./maybehere05/.file2
+-rw-r----- 1 root bandit5 2420 Sep 19 07:08 ./maybehere05/spaces file2
+-rw-r----- 1 root bandit5 1076 Sep 19 07:08 ./maybehere06/-file2
+-rw-r----- 1 root bandit5 8976 Sep 19 07:08 ./maybehere06/.file2
+-rw-r----- 1 root bandit5 4251 Sep 19 07:08 ./maybehere06/spaces file2
+-rw-r----- 1 root bandit5 2488 Sep 19 07:08 ./maybehere07/-file2
+-rw-r----- 1 root bandit5 1033 Sep 19 07:08 ./maybehere07/.file2
+-rw-r----- 1 root bandit5 9064 Sep 19 07:08 ./maybehere07/spaces file2
+-rw-r----- 1 root bandit5 3825 Sep 19 07:08 ./maybehere08/-file2
+-rw-r----- 1 root bandit5  747 Sep 19 07:08 ./maybehere08/.file2
+-rw-r----- 1 root bandit5 3693 Sep 19 07:08 ./maybehere08/spaces file2
+-rw-r----- 1 root bandit5  774 Sep 19 07:08 ./maybehere09/-file2
+-rw-r----- 1 root bandit5 8517 Sep 19 07:08 ./maybehere09/.file2
+-rw-r----- 1 root bandit5 8716 Sep 19 07:08 ./maybehere09/spaces file2
+-rw-r----- 1 root bandit5 1991 Sep 19 07:08 ./maybehere10/-file2
+-rw-r----- 1 root bandit5   99 Sep 19 07:08 ./maybehere10/.file2
+-rw-r----- 1 root bandit5 3570 Sep 19 07:08 ./maybehere10/spaces file2
+-rw-r----- 1 root bandit5 4559 Sep 19 07:08 ./maybehere11/-file2
+-rw-r----- 1 root bandit5 2501 Sep 19 07:08 ./maybehere11/.file2
+-rw-r----- 1 root bandit5  503 Sep 19 07:08 ./maybehere11/spaces file2
+-rw-r----- 1 root bandit5  251 Sep 19 07:08 ./maybehere12/-file2
+-rw-r----- 1 root bandit5 8244 Sep 19 07:08 ./maybehere12/.file2
+-rw-r----- 1 root bandit5 2460 Sep 19 07:08 ./maybehere12/spaces file2
+-rw-r----- 1 root bandit5 1423 Sep 19 07:08 ./maybehere13/-file2
+-rw-r----- 1 root bandit5 8952 Sep 19 07:08 ./maybehere13/.file2
+-rw-r----- 1 root bandit5  952 Sep 19 07:08 ./maybehere13/spaces file2
+-rw-r----- 1 root bandit5 8351 Sep 19 07:08 ./maybehere14/-file2
+-rw-r----- 1 root bandit5 1503 Sep 19 07:08 ./maybehere14/.file2
+-rw-r----- 1 root bandit5  871 Sep 19 07:08 ./maybehere14/spaces file2
+-rw-r----- 1 root bandit5 9499 Sep 19 07:08 ./maybehere15/-file2
+-rw-r----- 1 root bandit5  279 Sep 19 07:08 ./maybehere15/.file2
+-rw-r----- 1 root bandit5   51 Sep 19 07:08 ./maybehere15/spaces file2
+-rw-r----- 1 root bandit5 5301 Sep 19 07:08 ./maybehere16/-file2
+-rw-r----- 1 root bandit5 8472 Sep 19 07:08 ./maybehere16/.file2
+-rw-r----- 1 root bandit5 3146 Sep 19 07:08 ./maybehere16/spaces file2
+-rw-r----- 1 root bandit5 1791 Sep 19 07:08 ./maybehere17/-file2
+-rw-r----- 1 root bandit5 8341 Sep 19 07:08 ./maybehere17/.file2
+-rw-r----- 1 root bandit5 3387 Sep 19 07:08 ./maybehere17/spaces file2
+-rw-r----- 1 root bandit5   77 Sep 19 07:08 ./maybehere18/-file2
+-rw-r----- 1 root bandit5 2084 Sep 19 07:08 ./maybehere18/.file2
+-rw-r----- 1 root bandit5 6348 Sep 19 07:08 ./maybehere18/spaces file2
+-rw-r----- 1 root bandit5 5594 Sep 19 07:08 ./maybehere19/-file2
+-rw-r----- 1 root bandit5 4740 Sep 19 07:08 ./maybehere19/.file2
+-rw-r----- 1 root bandit5 8785 Sep 19 07:08 ./maybehere19/spaces file2
+bandit5@bandit:~/inhere$ find . -type f ! -executable -exec file {} + -exec ls -l {} + | grep 1033
+-rw-r----- 1 root bandit5 1033 Sep 19 07:08 ./maybehere07/.file2
+bandit5@bandit:~/inhere$ cat ./maybehere07/.file2
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
