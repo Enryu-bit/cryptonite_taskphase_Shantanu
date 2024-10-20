@@ -140,3 +140,23 @@ bandit3@bandit:~/inhere$ cat ...Hiding-From-You
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
 # Level 4
+There were many files in a directory but i didn't know how to find which file had the human readable content so after some research i found out by the combination of `find` and `file` commands we could do it.<br>
+`find . -type f -exec file {} +`<br>
+This command means that first we will find the files in `.` which is the cwd.<br>
+then we specify that we are looking for files by `-type f`.<br>
+then the `-exec` means that we want to perform some actions on then like gaining their file type by `file {} +` at once.<br>
+```bash
+bandit4@bandit:~/inhere$ find . -type f -exec file {} +
+./-file08: data
+./-file02: data
+./-file09: data
+./-file01: data
+./-file00: data
+./-file05: data
+./-file07: ASCII text
+./-file03: data
+./-file06: data
+./-file04: data
+bandit4@bandit:~/inhere$ cat ./-file07
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
