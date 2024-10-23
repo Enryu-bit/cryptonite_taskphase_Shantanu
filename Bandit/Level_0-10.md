@@ -633,3 +633,12 @@ D9========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 N=~[!N
 zA=?0j
 ```
+# Level 10
+Learnt about the `base64` command and how it can be used to encode and decode data in base64 format.<br>
+```bash
+bandit10@bandit:~$ cat data.txt
+VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==
+bandit10@bandit:~$ base64 -d data.txt
+The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+bandit10@bandit:~$
+```
